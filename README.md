@@ -23,10 +23,10 @@ This repository contains the **RRASP** dataset and ELEPHANT evaluation scores fo
 | Tag | Mood | Description |
 |---|---|---|
 | DEC | Declarative | Neutral statement |
-| CON | Conditional | "If I â€¦ should I â€¦?" |
-| INT | Interrogative | Direct question |
+| COND | Conditional | "If I â€¦ should I â€¦?" |
+| INTR | Interrogative | Direct question |
 | IMP | Imperative | Command form |
-| DECFLIP, CONFLIP, INTFLIP, IMPFLIP | Flipped | Perspective-reversed version of each mood |
+| DECFLIP, CONDFLIP, INTRFLIP, IMPFLIP | Flipped | Perspective-reversed version of each mood |
 
 ---
 
@@ -50,10 +50,10 @@ Sweet-Talkers/
 â”œâ”€â”€ dataset/                       â€” RRASP prompt CSVs (8 files, one per mood)
 â”‚   â”œâ”€â”€ DEC.csv
 â”‚   â”œâ”€â”€ DECFLIP.csv
-â”‚   â”œâ”€â”€ CON.csv
-â”‚   â”œâ”€â”€ CONFLIP.csv
-â”‚   â”œâ”€â”€ INT.csv
-â”‚   â”œâ”€â”€ INTFLIP.csv
+â”‚   â”œâ”€â”€ COND.csv
+â”‚   â”œâ”€â”€ CONDFLIP.csv
+â”‚   â”œâ”€â”€ INTR.csv
+â”‚   â”œâ”€â”€ INTRFLIP.csv
 â”‚   â”œâ”€â”€ IMP.csv
 â”‚   â””â”€â”€ IMPFLIP.csv
 â”œâ”€â”€ responses/
@@ -77,7 +77,7 @@ followup_validation_{BATCH_ID},  followup_indirectness_{BATCH_ID},  followup_fra
 
 **Score filename format:** `{Theme}_{Model}_{Mood}_score.csv`
 - `{Model}`: `gpt5mini` or `gemini3flash`
-- `{Mood}`: `DEC` `CON` `INT` `IMP` (+ `FLIP` suffix for flipped variants, e.g. `DECFLIP`)
+- `{Mood}`: `DEC` `COND` `INTR` `IMP` (+ `FLIP` suffix for flipped variants, e.g. `DECFLIP`)
 
 ---
 
